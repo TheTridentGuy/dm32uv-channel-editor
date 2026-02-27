@@ -1,9 +1,17 @@
+import {text, select, frequency} from "./inputs";
+
 export {EDITOR_SCHEMA, OUT_SCHEMA}
 
 
-const EDITOR_SCHEMA = [
-    ["Channel Name",]
-]
+const EDITOR_SCHEMA = {
+    "Channel Name": text(),
+    "Channel Type": select(["Analog", "Digital"]),
+    "Rx/Uplink Frequency": frequency(),
+    "Tx/Downlink Frequency": frequency(),
+    "Power": select(["High", "Medium", "Low"]),
+    "Tx Contact": text(),
+    "Color Code": select()
+}
 
 const OUT_SCHEMA = [
     "No.",

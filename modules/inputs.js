@@ -1,10 +1,14 @@
-export {text, select}
+export {text, select, frequency}
 
 
-class text {
+function text(){
 
 }
 
-class select {
+function select(){
+
+}
+
+function frequency(){
 
 }
