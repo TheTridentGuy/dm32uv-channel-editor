@@ -2,34 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Baofeng DM32UV Channel Editor</title>
-    <style>
-        * {
-            font-family: sans-serif;
-        }
-        flex-row {
-            display: flex;
-            flex-direction: row;
-        }
-        flex-col {
-            display: flex;
-            flex-direction: column;
-        }
-        flex-grow {
-            display: flex;
-            flex-grow: 1;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js" type="module"></script>
 </head>
 <body>
-    <div class="flex-col">
-        <table id="channel-table">
-            <tr>
-                <td>a</td>
-                <td>b</td>
-            </tr>
-        </table>
+<div class="flex-col">
+    <div class="flex-row">
+        <input id="file" onchange="load_csv(this)" type="file">
+        <button>Export</button>
     </div>
+    <hr>
+    <table id="channel-table"></table>
+</div>
 </body>
 </html>
