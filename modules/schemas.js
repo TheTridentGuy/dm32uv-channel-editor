@@ -10,7 +10,11 @@ const EDITOR_SCHEMA = {
     "Tx/Downlink Frequency": frequency(),
     "Power": select(["High", "Medium", "Low"]),
     "Tx Contact": text(),
-    "Color Code": select()
+    "Color Code": select(),
+    "Time Slot": select(["Slot 1", "Slot 2"]),
+    "DMR ID": text(),
+    "Rx CTCSS/DCS": select(),
+    "Tx CTCSS/DCS": select(),
 }
 
 const OUT_SCHEMA = [
